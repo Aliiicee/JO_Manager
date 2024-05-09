@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.jomanager.jo_manager.Controllers.HomeController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="750.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jomanager.jo_manager.Controllers.HomeController">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+      <Text layoutX="20.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evénements du jour" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+      <VBox layoutX="23.0" layoutY="134.0" prefHeight="300.0" prefWidth="500.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0" />
+      <Text layoutX="20.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tableau des Médailles" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="470.0" />
+      <HBox layoutX="20.0" layoutY="524.0" prefHeight="200.0" prefWidth="800.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="500.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Top 3 Pays">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <Accordion prefWidth="400.0">
+              <panes>
+                <TitledPane animated="false" text="untitled 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled 3">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+               <HBox.margin>
+                  <Insets left="-60.0" top="20.0" />
+               </HBox.margin>
+            </Accordion>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>
