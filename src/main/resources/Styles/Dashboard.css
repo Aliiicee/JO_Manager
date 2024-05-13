@@ -1,0 +1,49 @@
+.dashboard {
+    background-color: #EEEEEE;
+}
+
+.title {
+    -fx-font-size: 2.6em;
+    -fx-font-family: "Calibri Light";
+}
+
+.date_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.section_title{
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Calibry light";
+}
+
+.listview {
+    -fx-background-color: #EEEEEE;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: #AAAAAA;
+}
+
+.listview .scrollbar:vertical {
+    -fx-scale-x: 0;
+}
+
+.list_cell {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 15 0 15 0;
+}
+
+.dashboard Button {
+    -fx-background-color: linear-gradient(to right, #CCCCCC, #AAAAAA);
+    -fx-padding: 0 7 0 7;
+    -fx-border-radius: 5;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.dashboard Button:hover {
+    -fx-cursor: hand;
+}
+
+

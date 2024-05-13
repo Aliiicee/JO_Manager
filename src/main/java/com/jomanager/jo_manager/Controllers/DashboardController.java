@@ -4,16 +4,18 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
-public class AthletesController implements Initializable {
-    public ListView athletes_listview;
-    public ChoiceBox country_choicebox;
-    public Button add_athlete_button;
+public class DashboardController implements Initializable {
+    public Button country_btn;
+    public Button athlete_btn;
+    public Label date;
+    public ListView events_listview;
+    public ListView medals_listview;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        
     }
 }
