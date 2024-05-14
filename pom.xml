@@ -34,6 +34,11 @@
       <artifactId>sqlite-jdbc</artifactId>
       <version>3.45.3.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.calendarfx</groupId>
+      <artifactId>view</artifactId>
+      <version>11.12.7</version>
+    </dependency>
 
 
     <dependency>

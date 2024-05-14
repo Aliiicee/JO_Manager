@@ -4,6 +4,7 @@ module com.jomanager.jo_manager {
     requires java.sql;
     requires org.xerial.sqlitejdbc;
     requires de.jensd.fx.glyphs.fontawesome;
+    requires com.calendarfx.view;
 
     opens com.jomanager.jo_manager to javafx.fxml;
     exports com.jomanager.jo_manager;

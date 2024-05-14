@@ -14,6 +14,8 @@ public class ClientController implements Initializable {
         Model.getInstance().getViewFactory().getSelectedMenuItem().addListener((observableValue, oldVal, newVal) -> {
             switch (newVal) {
                 case "Athletes" -> client_parent.setCenter(Model.getInstance().getViewFactory().getAthletesView());
+                case "Sports" -> client_parent.setCenter(Model.getInstance().getViewFactory().getSportsView());
+                case "Events" -> client_parent.setCenter(Model.getInstance().getViewFactory().getEventsView());
                 default -> client_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });

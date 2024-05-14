@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="sports_container" stylesheets="@../Styles/Sports.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jomanager.jo_manager.Controllers.SportsController">
+   <Text layoutX="362.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disciplines"
+         AnchorPane.leftAnchor="362.0" AnchorPane.topAnchor="14.0"/>
+   <ListView fx:id="sports_listview" layoutX="14.0" layoutY="69.0" prefHeight="640.0" prefWidth="830.0"
+             AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0"/>
+   <ChoiceBox fx:id="sport_choicebox" layoutX="14.0" layoutY="64.0" prefWidth="150.0" AnchorPane.leftAnchor="14.0"
+              AnchorPane.topAnchor="64.0"/>
+   <Button fx:id="add_sport_button" layoutX="175.0" layoutY="64.0" mnemonicParsing="false" text="Ajouter"
+           AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="64.0"/>
+   <Button fx:id="register_athlete_button" layoutX="234.0" layoutY="64.0" mnemonicParsing="false" text="Inscrire un Athlète"
+           AnchorPane.leftAnchor="234.0" AnchorPane.topAnchor="64.0"/>
+</AnchorPane>

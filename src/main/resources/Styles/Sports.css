@@ -1,0 +1,44 @@
+
+.sports_container {
+    fx-background-color: #EEEEEE;
+}
+
+.sports_container Text {
+    -fx-text-fill: #000000;
+    -fx-font-size: 2.5em;
+    -fx-font-family: "Calibri Light";
+}
+
+.sports_container ChoiceBox {
+    -fx-background-color: #CCCCCC;
+    -fx-border-radius: 5;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.sports_container ChoiceBox:hover {
+    -fx-cursor: hand;
+}
+
+.sports_container Button {
+    -fx-background-color: linear-gradient(to right, #CCCCCC, #AAAAAA);
+    -fx-border-radius: 5;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.sports_container Button:hover {
+    -fx-cursor: hand;
+}
+
+.sports_container .list-view {
+    -fx-background-color: #EEEEEE;
+    -fx-padding: 10;
+}
+
+.sports_container .list-cell {
+    -fx-background-color: #EEEEEE;
+    -fx-pref-width: 800;
+}

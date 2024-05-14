@@ -12,6 +12,8 @@ public class ViewFactory {
     private final StringProperty selectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane athletesView;
+    private AnchorPane sportsView;
+    private AnchorPane eventsView;
 
     public ViewFactory() {
         this.selectedMenuItem = new SimpleStringProperty();
@@ -45,6 +47,30 @@ public class ViewFactory {
         return athletesView;
     }
 
+    public AnchorPane getSportsView() {
+        if (sportsView == null){
+            try {
+                sportsView = new FXMLLoader(getClass().getResource("/Fxml/Sports.fxml")).load();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        return sportsView;
+    }
+
+    public AnchorPane getEventsView() {
+        if (eventsView == null){
+            try {
+               eventsView = new FXMLLoader(getClass().getResource("/Fxml/Events.fxml")).load();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        return eventsView;
+    }
+
     public void showClientWindow() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client.fxml"));
         ClientController clientController = new ClientController();
@@ -63,6 +89,7 @@ public class ViewFactory {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle("JO Manager");
+        stage.setResizable(false);
         stage.show();
     }
 }

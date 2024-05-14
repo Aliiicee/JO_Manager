@@ -10,5 +10,5 @@
     <Text layoutX="375.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Athlètes" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="14.5" />
     <ListView fx:id="athletes_listview" layoutX="14.0" layoutY="69.0" prefHeight="640.0" prefWidth="830.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0" />
     <ChoiceBox fx:id="country_choicebox" layoutX="14.0" layoutY="64.0" prefWidth="150.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="64.0" />
-    <Button fx:id="add_athlete_button" layoutX="175.0" layoutY="64.0" mnemonicParsing="false" text="Add" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="64.0" />
+    <Button fx:id="add_athlete_button" layoutX="175.0" layoutY="64.0" mnemonicParsing="false" text="Ajouter" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="64.0" />
 </AnchorPane>
