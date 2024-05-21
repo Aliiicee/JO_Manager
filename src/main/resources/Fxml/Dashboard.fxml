@@ -23,7 +23,6 @@
    <Button fx:id="country_btn" layoutX="717.0" layoutY="465.0" mnemonicParsing="false" text="Pays" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="475.0" />
    <Button fx:id="athlete_btn" layoutX="778.0" layoutY="465.0" mnemonicParsing="false" text="Athlètes" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="475.0" />
    <AnchorPane prefHeight="200.0" prefWidth="800.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="500.0">
-      <ListView prefHeight="200.0" prefWidth="800.0" styleClass="listview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ListView fx:id="medals_listview" prefHeight="200.0" prefWidth="800.0" styleClass="listview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </AnchorPane>
 </AnchorPane>
