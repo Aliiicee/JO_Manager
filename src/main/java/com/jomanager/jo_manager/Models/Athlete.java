@@ -1,23 +1,22 @@
 package com.jomanager.jo_manager.Models;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class Athlete {
     private final StringProperty flagCountry;
     private final StringProperty athleteName;
-    private final StringProperty athleteAge;
+    private final IntegerProperty athleteAge;
     private final StringProperty athleteGender;
-    private final StringProperty athleteHeight;
-    private final StringProperty athleteWeight;
+    private final IntegerProperty athleteHeight;
+    private final DoubleProperty athleteWeight;
 
-    public Athlete(String flagCountry, String athleteName, String athleteAge, String athleteGender, String athleteHeight, String athleteWeight) {
+    public Athlete(String flagCountry, String athleteName, Integer athleteAge, String athleteGender, Integer athleteHeight, Double athleteWeight) {
         this.flagCountry = new SimpleStringProperty(this, "flagCountry", flagCountry);
         this.athleteName = new SimpleStringProperty(this, "athleteName", athleteName);
-        this.athleteAge = new SimpleStringProperty(this, "athleteAge", athleteAge);
+        this.athleteAge = new SimpleIntegerProperty(this, "athleteAge", athleteAge);
         this.athleteGender = new SimpleStringProperty(this, "athleteGender", athleteGender);
-        this.athleteHeight = new SimpleStringProperty(this, "athleteHeight", athleteHeight);
-        this.athleteWeight = new SimpleStringProperty(this, "athleteWeight", athleteWeight);
+        this.athleteHeight = new SimpleIntegerProperty(this, "athleteHeight", athleteHeight);
+        this.athleteWeight = new SimpleDoubleProperty(this, "athleteWeight", athleteWeight);
     }
 
     public StringProperty flagCountryProperty() {
@@ -28,7 +27,7 @@ public class Athlete {
         return this.athleteName;
     }
 
-    public StringProperty athleteAgeProperty() {
+    public IntegerProperty athleteAgeProperty() {
         return this.athleteAge;
     }
 
@@ -36,11 +35,11 @@ public class Athlete {
         return this.athleteGender;
     }
 
-    public StringProperty athleteHeightProperty() {
+    public IntegerProperty athleteHeightProperty() {
         return this.athleteHeight;
     }
 
-    public StringProperty athleteWeightProperty() {
+    public DoubleProperty athleteWeightProperty() {
         return this.athleteWeight;
     }
 }

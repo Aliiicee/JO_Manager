@@ -24,6 +24,7 @@ public class MenuController implements Initializable {
         athletes_btn.setOnAction(event -> onAthletes());
         sports_btn.setOnAction(event -> onSports());
         events_btn.setOnAction(event -> onEvents());
+        results_btn.setOnAction(event -> onResults());
     }
 
     private void onEvents() {
@@ -40,5 +41,9 @@ public class MenuController implements Initializable {
 
     private void onDasboard() {
         Model.getInstance().getViewFactory().getSelectedMenuItem().set("Dashboard");
+    }
+
+    private void onResults() {
+        Model.getInstance().getViewFactory().getSelectedMenuItem().set("Results");
     }
 }

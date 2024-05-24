@@ -16,6 +16,7 @@ public class ClientController implements Initializable {
                 case "Athletes" -> client_parent.setCenter(Model.getInstance().getViewFactory().getAthletesView());
                 case "Sports" -> client_parent.setCenter(Model.getInstance().getViewFactory().getSportsView());
                 case "Events" -> client_parent.setCenter(Model.getInstance().getViewFactory().getEventsView());
+                case "Results" -> client_parent.setCenter(Model.getInstance().getViewFactory().getResultsView());
                 default -> client_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });

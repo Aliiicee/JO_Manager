@@ -47,6 +47,17 @@ public class DatabaseDriver {
         return resultSet;
     }
 
+    public ResultSet getAthletesData(String groupBy, int countryId, int sportId) {
+       ResultSet resultSet;
+       if (groupBy.equals("byCountry")) {
+           resultSet = executeQuery("SELECT * FROM Athletes WHERE country_id='"+countryId+"'");
+       } else {
+           resultSet = executeQuery("SELECT * FROM Athletes WHERE sport_id='"+sportId+"'");
+       }
+
+       return resultSet;
+    }
+
     public ResultSet getAthleteById(int athleteId) {
         return executeQuery("SELECT * FROM Athletes WHERE athlete_id='"+athleteId+"'");
     }

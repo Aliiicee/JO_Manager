@@ -11,7 +11,7 @@ public class AthleteCellController implements Initializable {
     public ImageView flag_img;
     public Label name_lbl;
     public Label age_lbl;
-    public Label sex_lbl;
+    public Label gender_lbl;
     public Label height_lbl;
     public Label weight_lbl;
 
@@ -23,6 +23,10 @@ public class AthleteCellController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        name_lbl.textProperty().bind(athlete.athleteNameProperty());
+        age_lbl.textProperty().bind(athlete.athleteAgeProperty().asString());
+        gender_lbl.textProperty().bind(athlete.athleteGenderProperty());
+        height_lbl.textProperty().bind(athlete.athleteHeightProperty().asString());
+        weight_lbl.textProperty().bind(athlete.athleteWeightProperty().asString());
     }
 }

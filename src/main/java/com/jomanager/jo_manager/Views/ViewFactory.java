@@ -10,17 +10,32 @@ import javafx.stage.Stage;
 
 public class ViewFactory {
     private final StringProperty selectedMenuItem;
+    private StringProperty dashboardMedalsListViewState;
+    private StringProperty resultsMedalsListViewState;
     private AnchorPane dashboardView;
     private AnchorPane athletesView;
     private AnchorPane sportsView;
     private AnchorPane eventsView;
+    private AnchorPane resultsView;
 
     public ViewFactory() {
         this.selectedMenuItem = new SimpleStringProperty();
+        this.dashboardMedalsListViewState = new SimpleStringProperty();
+        dashboardMedalsListViewState.set("byCountries");
+        this.resultsMedalsListViewState = new SimpleStringProperty();
+        resultsMedalsListViewState.set("byCountries");
     }
 
     public StringProperty getSelectedMenuItem() {
         return selectedMenuItem;
+    }
+
+    public StringProperty getDashboardMedalsListViewState() {
+        return dashboardMedalsListViewState;
+    }
+
+    public StringProperty getResultsMedalsListViewState() {
+        return resultsMedalsListViewState;
     }
 
     public AnchorPane getDashboardView() {
@@ -69,6 +84,18 @@ public class ViewFactory {
         }
 
         return eventsView;
+    }
+
+    public AnchorPane getResultsView() {
+        if (resultsView == null){
+            try {
+                resultsView = new FXMLLoader(getClass().getResource("/Fxml/Results.fxml")).load();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        return resultsView;
     }
 
     public void showClientWindow() {
