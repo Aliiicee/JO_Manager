@@ -5,16 +5,18 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Sport {
+public class Country {
     private final IntegerProperty id;
     private final StringProperty name;
 
-    public Sport(Integer id, String name) {
-        this.id = new SimpleIntegerProperty(this, "id", id);
+    public Country(Integer id, String name) {
         this.name = new SimpleStringProperty(this, "name", name);
+        this.id = new SimpleIntegerProperty(this, "id", id);
     }
 
     public StringProperty getName() {
-       return this.name;
+        return name;
     }
+
+    public IntegerProperty getId() {return id;}
 }

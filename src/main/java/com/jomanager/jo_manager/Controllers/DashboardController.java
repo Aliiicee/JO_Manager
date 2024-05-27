@@ -20,6 +20,7 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        daypage.getCalendarSources().addAll(Model.getInstance().getCalendarSource());
         country_btn.setOnAction(event -> onCountries());
         athlete_btn.setOnAction(event -> onAthletes());
         Model.getInstance().getViewFactory().getDashboardMedalsListViewState().addListener((observableValue, oldVal, newVal) -> {

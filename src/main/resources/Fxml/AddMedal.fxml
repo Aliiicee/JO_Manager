@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="170.0" prefWidth="400.0" styleClass="addWindow" stylesheets="@../Styles/AddWindow.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jomanager.jo_manager.Controllers.AddMedalController">
+   <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Athlète" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0" />
+   <ChoiceBox fx:id="athlete_choiceBox" layoutX="75.0" layoutY="15.0" prefWidth="150.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="15.0" />
+   <Text layoutX="24.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Evénement" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="65.0" />
+   <ChoiceBox fx:id="event_choiceBox" layoutX="85.0" layoutY="25.0" prefWidth="150.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="60.0" />
+   <Text layoutX="24.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Médaille" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="110.0" />
+   <CheckBox fx:id="bronzeCheckBox" layoutX="80.0" layoutY="155.0" mnemonicParsing="false" text="Bronze" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="107.0" />
+   <CheckBox fx:id="silverCheckBox" layoutX="140.0" layoutY="155.0" mnemonicParsing="false" text="Argent" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="107.0" />
+   <CheckBox fx:id="goldCheckBox" layoutX="208.0" layoutY="155.0" mnemonicParsing="false" text="Or" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="107.0" />
+   <Button fx:id="add_button" layoutX="320.0" layoutY="355.0" mnemonicParsing="false" text="Ajouter" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="105.0" />
+   <Text fx:id="error_txt" layoutX="16.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error_txt" text="Erreur : Champs manquants" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+</AnchorPane>

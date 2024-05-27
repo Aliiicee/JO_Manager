@@ -1,0 +1,37 @@
+.addWindow {
+    -fx-background-color: #FFFFFF;
+}
+
+.addWindow Text {
+    -fx-text-fill: #000000;
+    -fx-font-size: 1.25em;
+    -fx-font-family: "Calibri Light";
+}
+
+.addWindow ChoiceBox {
+    -fx-background-color: #CCCCCC;
+    -fx-border-radius: 5;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.addWindow ChoiceBox:hover {
+    -fx-cursor: hand;
+}
+
+.addWindow Button {
+    -fx-background-color: linear-gradient(to right, #CCCCCC, #AAAAAA);
+    -fx-border-radius: 5;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
+}
+
+.addWindow Button:hover {
+    -fx-cursor: hand;
+}
+
+.error_txt {
+    -fx-text-fill: #FF0000;
+}

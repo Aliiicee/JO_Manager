@@ -17,31 +17,21 @@ public class ResultsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        add_medal_button.setOnAction(event -> onAdd());
         country_btn.setOnAction(event -> onCountries());
         athlete_btn.setOnAction(event -> onAthletes());
         Model.getInstance().getViewFactory().getResultsMedalsListViewState().addListener((observableValue, oldVal, newVal) -> {
             if (newVal.equals("byCountries")) {
-                initMedalsByCountriesListView();
+                Model.getInstance().setAllMedalsByCountries();
                 results_listview.setItems(Model.getInstance().getAllMedalsByCountries());
             } else {
-                initMedalsByAthletesListView();
+                Model.getInstance().setAllMedalsByAthletes();
                 results_listview.setItems(Model.getInstance().getAllMedalsByAthletes());
             }
         });
         results_listview.setCellFactory(e -> new MedalsCellFactory());
     }
 
-    private void initMedalsByCountriesListView() {
-        if (Model.getInstance().getAllMedalsByCountries().isEmpty()) {
-            Model.getInstance().setAllMedalsByCountries();
-        }
-    }
-
-    private void initMedalsByAthletesListView() {
-        if (Model.getInstance().getAllMedalsByAthletes().isEmpty()) {
-            Model.getInstance().setAllMedalsByAthletes();
-        }
-    }
 
     public void onCountries() {
         Model.getInstance().getViewFactory().getResultsMedalsListViewState().set("byCountries");
@@ -49,5 +39,9 @@ public class ResultsController implements Initializable {
 
     public void onAthletes() {
         Model.getInstance().getViewFactory().getResultsMedalsListViewState().set("byAthletes");
+    }
+
+    private void onAdd() {
+        Model.getInstance().getViewFactory().showAddMedalWindow();
     }
 }

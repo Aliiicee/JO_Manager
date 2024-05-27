@@ -39,61 +39,55 @@ public class ViewFactory {
     }
 
     public AnchorPane getDashboardView() {
-        if (dashboardView == null){
-            try {
-                dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Dashboard.fxml")).load();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        try {
+            dashboardView = new FXMLLoader(getClass().getResource("/Fxml/Dashboard.fxml")).load();
+        } catch (Exception e){
+            e.printStackTrace();
         }
 
         return dashboardView;
     }
 
     public AnchorPane getAthletesView() {
-        if (athletesView == null){
-            try {
-                athletesView = new FXMLLoader(getClass().getResource("/Fxml/Athletes.fxml")).load();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        try {
+            athletesView = new FXMLLoader(getClass().getResource("/Fxml/Athletes.fxml")).load();
+        } catch (Exception e){
+            e.printStackTrace();
         }
+
 
         return athletesView;
     }
 
     public AnchorPane getSportsView() {
-        if (sportsView == null){
-            try {
-                sportsView = new FXMLLoader(getClass().getResource("/Fxml/Sports.fxml")).load();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        try {
+            sportsView = new FXMLLoader(getClass().getResource("/Fxml/Sports.fxml")).load();
+        } catch (Exception e){
+            e.printStackTrace();
         }
+
 
         return sportsView;
     }
 
     public AnchorPane getEventsView() {
-        if (eventsView == null){
-            try {
-               eventsView = new FXMLLoader(getClass().getResource("/Fxml/Events.fxml")).load();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        try {
+           eventsView = new FXMLLoader(getClass().getResource("/Fxml/Events.fxml")).load();
+        } catch (Exception e){
+            e.printStackTrace();
         }
+
 
         return eventsView;
     }
 
     public AnchorPane getResultsView() {
-        if (resultsView == null){
-            try {
-                resultsView = new FXMLLoader(getClass().getResource("/Fxml/Results.fxml")).load();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        try {
+            resultsView = new FXMLLoader(getClass().getResource("/Fxml/Results.fxml")).load();
+        } catch (Exception e){
+            e.printStackTrace();
         }
+
 
         return resultsView;
     }
@@ -102,6 +96,26 @@ public class ViewFactory {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client.fxml"));
         ClientController clientController = new ClientController();
         loader.setController(clientController);
+        createStage(loader);
+    }
+
+    public void showAddAthleteWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/AddAthlete.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddSportWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/AddSport.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddMedalWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/AddMedal.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddEventWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/AddEvent.fxml"));
         createStage(loader);
     }
 
@@ -118,5 +132,9 @@ public class ViewFactory {
         stage.setTitle("JO Manager");
         stage.setResizable(false);
         stage.show();
+    }
+
+    public void closeStage(Stage stage) {
+        stage.close();
     }
 }
