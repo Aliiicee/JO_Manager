@@ -23,6 +23,8 @@ public class DashboardController implements Initializable {
         daypage.getCalendarSources().addAll(Model.getInstance().getCalendarSource());
         country_btn.setOnAction(event -> onCountries());
         athlete_btn.setOnAction(event -> onAthletes());
+        initMedalsByCountriesListView();
+        medals_listview.setItems(Model.getInstance().getTopMedalsByCountries());
         Model.getInstance().getViewFactory().getDashboardMedalsListViewState().addListener((observableValue, oldVal, newVal) -> {
             if (newVal.equals("byCountries")) {
                 initMedalsByCountriesListView();

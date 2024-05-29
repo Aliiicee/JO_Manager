@@ -46,15 +46,15 @@ public class AddMedalController implements Initializable {
         String medalType = getMedalType();
         String[] athleteFullName = athlete_choiceBox.getValue().split(" ");
         Integer athleteId = Model.getInstance().getDatabaseDriver().getAthleteId(athleteFullName[0], athleteFullName[1]);
-        Integer sportId = null;
+        Integer countryId = null;
         Integer eventId = null;
         try {
-            sportId = Model.getInstance().getDatabaseDriver().getAthleteById(athleteId).getInt("sport_id");
+            countryId = Model.getInstance().getDatabaseDriver().getAthleteById(athleteId).getInt("country_id");
             eventId = Model.getInstance().getDatabaseDriver().getEventId(event_choiceBox.getValue());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Model.getInstance().getDatabaseDriver().addMedal(medalType, athleteId, eventId, sportId);
+        Model.getInstance().getDatabaseDriver().addMedal(medalType, athleteId, eventId, countryId);
     }
 
     private void initAthleteChoiceBox() {

@@ -35,6 +35,7 @@ public class AthletesController implements Initializable {
             countriesName.add(country.getName().getValue());
         }
         country_choicebox.getItems().addAll(countriesName);
+        country_choicebox.setValue("France");
         country_choicebox.setOnAction(this::refreshList);
     }
 

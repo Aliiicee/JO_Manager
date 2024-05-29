@@ -35,6 +35,7 @@ public class SportsController implements Initializable {
             sportsName.add(sport.getName().getValue());
         }
         sport_choicebox.getItems().addAll(sportsName);
+        sport_choicebox.setValue("Natation");
         sport_choicebox.setOnAction(this::refreshList);
     }
 

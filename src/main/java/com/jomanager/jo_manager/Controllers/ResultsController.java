@@ -20,6 +20,8 @@ public class ResultsController implements Initializable {
         add_medal_button.setOnAction(event -> onAdd());
         country_btn.setOnAction(event -> onCountries());
         athlete_btn.setOnAction(event -> onAthletes());
+        Model.getInstance().setAllMedalsByCountries();
+        results_listview.setItems(Model.getInstance().getAllMedalsByCountries());
         Model.getInstance().getViewFactory().getResultsMedalsListViewState().addListener((observableValue, oldVal, newVal) -> {
             if (newVal.equals("byCountries")) {
                 Model.getInstance().setAllMedalsByCountries();
